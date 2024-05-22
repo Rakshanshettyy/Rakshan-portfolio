@@ -1,4 +1,7 @@
-export default {
+import React from 'react'
+
+function themes() {
+  return ({
     // Temp fonts
     fonts: {
       title: "Space Grotesk, sans-serif",
@@ -24,3 +27,9 @@ export default {
       xl: 'screen and (max-width: 1280px)'
     },
   }
+    
+  )
+}
+
+export default themes
+
