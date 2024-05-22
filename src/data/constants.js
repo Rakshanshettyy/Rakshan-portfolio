@@ -297,7 +297,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+    img: "https://images.shiksha.com/mediadata/images/1602828916phpIjgYq2.jpeg",
     school: "Manipal Institute of Technology",
     date: "October 2021 - July 2023",
     grade: "7.93 CGPA",
@@ -306,7 +306,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://smcshirva.org/img/College%20Logo%20color.jpg",
     school: "St Marys College,Shirva",
     date: "May 2018 - October 2021",
     grade: "80.25%",
@@ -315,7 +315,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://stjohnsshankerpura.org/file/2021/03/cropped-St-Johns-composite-college.png",
     school: "St Johns Composite Pre-university college,Shankerpura",
     date: "May 2017 - April 2018",
     grade: "71.66%",
@@ -324,7 +324,7 @@ export const education = [
   },
   {
     id: 3,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://stjohnsshankerpura.org/file/2021/03/St-johns-academy.png",
     school: "St Johns Academy,Shankerpura",
     date: "May 2015 - April 2016",
     grade: "85.92%",
