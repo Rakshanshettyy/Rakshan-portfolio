@@ -301,7 +301,7 @@ export const education = [
     school: "Manipal Institute of Technology",
     date: "October 2021 - July 2023",
     grade: "7.93 CGPA",
-    desc: "I have completed my Master of Computer Applications,MIT,Manipalm with the Cgpa of 7.93.I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks,Cyber Forensics, among others",
+    desc: "I have completed my Master of Computer Applications,MIT,Manipal with the Cgpa of 7.93.I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks,Cyber Forensics, among others",
     degree: "Master of Computer Applications",
   },
   {
