@@ -197,7 +197,7 @@ export const experiences = [
 		img: "https://novelty-data.com/wp-content/uploads/2019/09/transparent-2.png",
 		role: "Software Developer",
 		company: "Novelty Data Solutions",
-		date: "Aug 2024 - Present",
+		date: "April 2024 - Present",
 		desc: "Collaborated on backend projects using .NET Core and MySQL, while also designing responsive web pages with SCSS, React, and Bootstrap. Communicated with U.S. clients to gather feedback and contributed to optimization efforts. Played a key role in developing the Habit Learning-Tutoring Platform's frontend with Bootstrap 5 and SCSS, and utilized the .NET Core MVC framework for backend development.",
 		skills: [
 			".NET Core",
@@ -215,7 +215,7 @@ export const experiences = [
 		img: "https://companieslogo.com/img/orig/LTIM.NS-dea59dc6.png?t=1720244492",
 		role: " Software Engineer Intern",
 		company: "LTIMindtree",
-		date: "July 2024 - Sept 2024",
+		date: "Jan 2024 - March 2024",
 		desc: "Learned Java, Servlets, JavaScript, TypeScript, and GitHub through the LTIMindtree Ignite Program, achieving an 84% score.",
 		skills: [
 			"Java",
