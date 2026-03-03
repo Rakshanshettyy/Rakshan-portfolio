@@ -5,7 +5,7 @@ export const Bio = {
 		"I am a backend-focused Software Engineer with nearly 3 years of industry experience specializing in Core Java, J2EE, Spring Boot, and Microservices architecture. My core expertise lies in cloud deployment, complex web programming, and building highly scalable RESTful APIs that drive enterprise business operations. I thrive in agile environments where I can solve complex database challenges, optimize server-side performance, and take full ownership of the cloud deployment lifecycle.",
 	github: "https://github.com/Rakshanshettyy",
 	resume:
-		"https://drive.google.com/file/d/1WqAMVqPoF-9_ug06NIsR5DHqYu0-8-XY/view?usp=sharing",
+		"https://drive.google.com/file/d/1RhGIxPaGCH4-IvHQyazFtFur4DS1LHBl/view?usp=sharing",
 	linkedin: "https://www.linkedin.com/in/rakshannshetty/",
 	twitter: "https://twitter.com/rakshannshetty",
 	insta: "https://www.instagram.com/rakshannshetty/",

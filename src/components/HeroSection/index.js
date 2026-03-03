@@ -22,6 +22,7 @@ const HeroSection = () => {
                                         strings: Bio.roles,
                                         autoStart: true,
                                         loop: true,
+                                        cursor: '|',
                                     }}
                                 />
                             </Span>

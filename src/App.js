@@ -13,6 +13,7 @@ import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import "./App.css";
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Reveal } from "./components/Reveal";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -49,16 +50,30 @@ function App() {
       <Body>
         {/* Pass the state to Navbar so we can add a toggle button */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <HeroSection />
-        <Wrapper>
-          <Skills />
-          <Experience />
-        </Wrapper>
-        <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        <Wrapper>
-          <Education />
-          <Contact />
-        </Wrapper>
+       <Reveal>
+            <HeroSection />
+          </Reveal>
+          
+          <Wrapper>
+            <Reveal>
+              <Skills />
+            </Reveal>
+            <Reveal>
+              <Experience />
+            </Reveal>
+          </Wrapper>
+       <Reveal>
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          </Reveal>
+          
+          <Wrapper>
+            <Reveal>
+              <Education />
+            </Reveal>
+            <Reveal>
+              <Contact />
+            </Reveal>
+          </Wrapper>
         <Footer />
         {openModal.state && (
           <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />

@@ -1,23 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const Button = styled.button`
     display: none;
     width: 100%;
     padding: 10px;
-    background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.text_black};
+    background-color: ${({ theme }) => theme.primary}; /* Matches your theme purple [cite: 5] */
+    color: ${({ theme }) => theme.white};
     font-size: 14px;
     font-weight: 700;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.primary + "CC"};
+        transform: scale(1.02);
+    }
 `
+
 const Card = styled.div`
     width: 330px;
-    height: 490px;
+    height: 560;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
@@ -27,14 +33,18 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 14px;
+    border: 1px solid transparent; 
     transition: all 0.5s ease-in-out;
+
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); /* Purple glow effect  */
+        border: 1px solid rgba(139, 92, 246, 0.8);
         filter: brightness(1.1);
     }
+
     &:hover ${Button} {
-        display: block;
+        display: block; /* Button becomes visible on hover  */
     }
 `
 
@@ -71,6 +81,7 @@ const Details = styled.div`
     gap: 0px;
     padding: 0px 2px;
 `
+
 const Title = styled.div`
     font-size: 20px;
     font-weight: 600;
@@ -80,7 +91,6 @@ const Title = styled.div`
     max-width: 100%;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
     text-overflow: ellipsis;
 `
 
@@ -93,7 +103,6 @@ const Date = styled.div`
         font-size: 10px;
     }
 `
-
 
 const Description = styled.div`
     font-weight: 400;
@@ -112,6 +121,7 @@ const Members = styled.div`
     align-items: center;
     padding-left: 10px;
 `
+
 const Avatar = styled.img`
     width: 38px;
     height: 38px;
@@ -122,13 +132,13 @@ const Avatar = styled.img`
     border: 3px solid ${({ theme }) => theme.card};
 `
 
-const ProjectCards = ({project,setOpenModal}) => {
+const ProjectCards = ({project, setOpenModal}) => {
     return (
         <Card onClick={() => setOpenModal({state: true, project: project})}>
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                    <Tag key={index}>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -137,11 +147,21 @@ const ProjectCards = ({project,setOpenModal}) => {
                 <Description>{project.description}</Description>
             </Details>
             <Members>
-                {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
+                {project.member?.map((member, index) => (
+                    <Avatar key={index} src={member.img}/>
                 ))}
             </Members>
-            {/* <Button>View Project</Button> */}
+            {/* Functional View Project Button  */}
+            {project.webapp && (
+                <Button 
+                    onClick={(e) => {
+                        e.stopPropagation(); // Prevents modal from opening 
+                        window.open(project.webapp, "_blank");
+                    }}
+                >
+                    View Live Site
+                </Button>
+            )}
         </Card>
     )
 }

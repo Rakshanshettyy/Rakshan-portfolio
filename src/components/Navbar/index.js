@@ -12,9 +12,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a href="/" style={{ display: "flex", alignItems: "center", color: darkMode ? "white" : "black", marginBottom: '20', cursor: 'pointer' }}>
-            
-            {/* Show a different icon based on the theme */}
+          <a href="/" style={{ display: "flex", alignItems: "center", color: darkMode ? "white" : "black", marginBottom: '20px', cursor: 'pointer' }}>            {/* Show a different icon based on the theme */}
             {darkMode ? (
               <MdDataSaverOff size="30px" color="#8B5CF6" /> // Purple Java icon for dark mode
             ) : (
