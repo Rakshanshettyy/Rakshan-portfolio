@@ -1,54 +1,69 @@
+import { useState} from "react";
 import { ThemeProvider } from "styled-components";
-import { useState, useEffect } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
+import { darkTheme, lightTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
-import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
-import About from "./components/About";
 import Skills from "./components/Skills";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
+import "./App.css";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.text_primary};
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-`
+  transition: all 0.3s ease-in-out;
+`;
 
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  background: linear-gradient(
+      38.73deg,
+      rgba(139, 92, 246, 0.05) 0%,
+      rgba(32, 40, 112, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(59, 130, 246, 0.05) 100%
+    );
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
-`
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+`;
+
 function App() {
+  // Theme state is now active and used!
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Body>
+      <Router> 
+      <Body>
+        {/* Pass the state to Navbar so we can add a toggle button */}
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <HeroSection />
+        <Wrapper>
+          <Skills />
+          <Experience />
+        </Wrapper>
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        <Wrapper>
+          <Education />
+          <Contact />
+        </Wrapper>
+        <Footer />
+        {openModal.state && (
+          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+        )}
+      </Body>
       </Router>
     </ThemeProvider>
   );
