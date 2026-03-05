@@ -204,8 +204,19 @@ export const education = [
 ];
 
 export const projects = [
+{
+        id: 0,
+        title: "FluxHub - Microservices Ecosystem",
+        date: "March 2026",
+        description:
+            "A containerized microservices architecture deployed on Google Cloud Run. Service 1 manages project metadata and persists data to MongoDB, while Service 2 handles automated email notifications triggered by internal service calls. The entire ecosystem is orchestrated using Docker and features a robust CI/CD pipeline via GitHub Actions for automated testing and deployment.",
+        image: "./fluxhub-logo.png", 
+        tags: ["Spring Boot", "Google Cloud Run", "Docker", "MongoDB", "GitHub Actions", "Microservices"],
+        category: "microservices",
+        webapp: "https://fluxhubv1.netlify.app/",
+    },
 	{
-		id: 0,
+		id: 1,
 		title: "NidhiGold - Gold Finance Software",
 		date: "Feb 2025 - Present",
 		description:
@@ -216,7 +227,7 @@ export const projects = [
 		category: "enterprise software",
 	},
 	{
-		id: 1,
+		id: 2,
 		title: "Glassio – Real-Time Collaborative Editor",
 		date: "Personal Project",
 		description:
@@ -228,7 +239,7 @@ export const projects = [
 		webapp: "https://glassio.netlify.app/",
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "AdmitScope – Student Consulting Platform",
 		date: "Aug 2024 - Dec 2024",
 		description:
